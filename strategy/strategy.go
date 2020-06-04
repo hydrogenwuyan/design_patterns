@@ -34,7 +34,7 @@ import "fmt"
 func main() {
 	ctx := &Context{}
 	ctx.SetSort(&BubbleSort{})
-	ctx.IntSort([]int{2, 7, 6, 3, 8, 1})
+	ctx.IntSortOfAsc([]int{2, 7, 6, 3, 8, 1})
 }
 
 // 环境类
