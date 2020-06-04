@@ -31,6 +31,11 @@ func main() {
 	scoreCtx.AddScore(10)
 }
 
+/*
+	本实例包含了“不及格”“中等”和“优秀” 3 种状态，当学生的分数小于 60 分时为“不及格”状态，
+	当分数大于等于 60 分且小于 85 分时为“中等”状态，当分数大于等于 85 分时为“优秀”状态，我们用状态模式来实现这个程序。
+*/
+
 // 环境类
 type ScoreContext struct {
 	state AbstractState

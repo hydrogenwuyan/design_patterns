@@ -30,6 +30,10 @@ func main() {
 	rmb.Change(10)
 }
 
+/*
+	当“人民币汇率”升值时，进口公司的进口产品成本降低且利润率提升，出口公司的出口产品收入降低且利润率降低；
+*/
+
 // 抽象目标：汇率
 type Rate interface {
 	Add(c ...Company)

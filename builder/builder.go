@@ -30,10 +30,17 @@ import (
 )
 
 func main() {
-	builder := CreateConcreteDecorator1()	// 建造者
-	m := CreateProjectManager(builder)	// 指挥者
+	builder := CreateConcreteDecorator1() // 建造者
+	m := CreateProjectManager(builder)    // 指挥者
 	m.Decorate()
 }
+
+/*
+	客厅装修是一个复杂的过程，它包含墙体的装修、电视机的选择、沙发的购买与布局等。客户把装修要求告诉项目经理，
+	项目经理指挥装修工人一步步装修，最后完成整个客厅的装修与布局，所以本实例用建造者模式实现比较适合。
+	这里客厅是产品，包括墙、电视和沙发等组成部分。具体装修工人是具体建造者，他们负责装修与墙、电视和沙发的布局。
+	项目经理是指挥者，他负责指挥装修工人进行装修。
+*/
 
 // 产品：客厅
 type Parlour struct {
@@ -89,7 +96,7 @@ func (c *ConcreteDecorator1) Show() {
 	c.parlour.Show()
 }
 
-func CreateConcreteDecorator1() *ConcreteDecorator1{
+func CreateConcreteDecorator1() *ConcreteDecorator1 {
 	return &ConcreteDecorator1{parlour: &Parlour{}}
 }
 
@@ -118,7 +125,7 @@ func (c *ConcreteDecorator2) Show() {
 	c.parlour.Show()
 }
 
-func CreateConcreteDecorator2() *ConcreteDecorator2{
+func CreateConcreteDecorator2() *ConcreteDecorator2 {
 	return &ConcreteDecorator2{parlour: &Parlour{}}
 }
 
@@ -140,5 +147,5 @@ func (p *ProjectManager) Decorate() {
 }
 
 func CreateProjectManager(builder Decorator) *ProjectManager {
-	return &ProjectManager{builder:builder}
+	return &ProjectManager{builder: builder}
 }

@@ -31,6 +31,10 @@ func main() {
 	menu.Show()
 }
 
+/*
+	通过菜单我们可以看到不同的菜品，无需去厨房。
+*/
+
 // 外观角色：菜单
 type Menu struct {
 	beef   *Beef

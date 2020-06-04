@@ -32,6 +32,10 @@ func main() {
 	w.BuyTicket()
 }
 
+/*
+	购买车票无需到车站购买，可以在微信小程序购买，微信小程序扮演代理角色。
+*/
+
 // 抽象主题：购票
 type Ticket interface {
 	BuyTicket()

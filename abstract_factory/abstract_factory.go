@@ -31,6 +31,10 @@ func main() {
 	farm.CreatePlant().Show()
 }
 
+/*
+	农场中除了像畜牧场一样可以养动物，还可以培养植物，如养马、养牛、种菜、种水果等，
+*/
+
 // 动物类接口
 type Animal interface {
 	Show()
@@ -45,7 +49,7 @@ func (h *Horse) Show() {
 }
 
 // 构造函数
-func CreateHorse() *Horse{
+func CreateHorse() *Horse {
 	return &Horse{}
 }
 
@@ -57,7 +61,7 @@ func (c *Cattle) Show() {
 	fmt.Println("I am cattle")
 }
 
-func CreateCattle() *Cattle{
+func CreateCattle() *Cattle {
 	return &Cattle{}
 }
 
@@ -74,7 +78,7 @@ func (c *Fruit) Show() {
 	fmt.Println("I am fruit")
 }
 
-func CreateFruit() *Fruit{
+func CreateFruit() *Fruit {
 	return &Fruit{}
 }
 
@@ -86,7 +90,7 @@ func (c *Vegetable) Show() {
 	fmt.Println("I am vegetable")
 }
 
-func CreateVegetable() *Vegetable{
+func CreateVegetable() *Vegetable {
 	return &Vegetable{}
 }
 
@@ -131,4 +135,3 @@ func (f *CFarm) CreatePlant() Plant {
 func CreateCFarm() *CFarm {
 	return &CFarm{}
 }
-

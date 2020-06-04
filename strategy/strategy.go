@@ -37,6 +37,10 @@ func main() {
 	ctx.IntSortOfAsc([]int{2, 7, 6, 3, 8, 1})
 }
 
+/*
+	排序是可以选择多种排序策略。
+*/
+
 // 环境类
 type Context struct {
 	sort Sort

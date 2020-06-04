@@ -42,6 +42,10 @@ func main() {
 	buyerA.Send("我买")
 }
 
+/*
+	房地产交流平台是“房地产中介公司”提供给“卖方客户”与“买方客户”进行信息交流的平台，比较适合用中介者模式来实现。
+*/
+
 // 抽象中介者：中介公司
 type Medium interface {
 	Register(c ...Customer)

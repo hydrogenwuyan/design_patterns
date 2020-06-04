@@ -29,6 +29,14 @@ func main() {
 	f.GetChessPieces(ChessPiecesTypeWhite).DownPieces(Point{1, 2})
 }
 
+/*
+	五子棋同围棋一样，包含多个黑或白颜色的棋子，所以用享元模式比较好。
+	本实例中的棋子类是抽象享元角色，它包含了一个落子的方法；
+	白子（WhitePieces）和黑子（BlackPieces）类是具体享元角色，它实现了落子方法；
+	Point是非享元角色，它指定了落子的位置；GoFactory是享元工厂角色，
+	它通过ChessPiecesMap来管理棋子，并且提供了获取白子或者黑子的方法；
+*/
+
 type ChessPiecesType int
 
 const (
