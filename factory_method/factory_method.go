@@ -28,7 +28,7 @@ func main() {
 		fmt.Println("manager is nil")
 		return
 	}
-	fmt.Println(manager.Calculate(4,5))
+	fmt.Println(manager.Calculate(4, 5))
 }
 
 // 抽象运算类接口
@@ -38,13 +38,13 @@ type CalculateManager interface {
 
 // 运算类工厂接口
 type CalculateFactory interface {
-	CreateCalculateManager() *CalculateManager
+	CreateCalculateManager() CalculateManager
 }
 
 // 运算类工厂类型枚举
-type CalculateFactoryFunc func() *CalculateManager
+type CalculateFactoryFunc func() CalculateManager
 
-func (f CalculateFactoryFunc) CreateCalculateManager() *CalculateManager {
+func (f CalculateFactoryFunc) CreateCalculateManager() CalculateManager {
 	return f()
 }
 
